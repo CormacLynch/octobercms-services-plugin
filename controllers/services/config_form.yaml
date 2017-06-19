@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Service
+
+# Model Form Field configuration
+form: $/getright/services/models/service/fields.yaml
+
+# Model Class name
+modelClass: GetRight\Services\Models\Service
+
+# Default redirect location
+defaultRedirect: getright/services/services
+
+# Create page
+create:
+    title: Create Service
+    redirect: getright/services/services/update/:id
+    redirectClose: getright/services/services
+
+# Update page
+update:
+    title: Edit Service
+    redirect: getright/services/services
+    redirectClose: getright/services/services
+
+# Preview page
+preview:
+    title: Preview Service
