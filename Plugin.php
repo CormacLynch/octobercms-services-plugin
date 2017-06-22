@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\App;
 class Plugin extends PluginBase
 {
     /**
+     * @var array Plugin Dependencies.
+     */
+    public $require = ['Rahman.Faker'];
+
+    /**
      * Returns information about this plugin.
      *
      * @return array
