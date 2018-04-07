@@ -1,6 +1,7 @@
 <?php namespace GetRight\Services\Models;
 
 use Model;
+use Cms\Classes\Page;
 
 /**
  * Service Model
@@ -22,6 +23,23 @@ class Service extends Model
         'title' => 'required|string',
         'text' => 'required|string'
     ];
+
+		/**
+		 * Get a list of all pages. Prepend an empty option to the start
+		 *
+		 * @return array
+		 */
+		public function getUrlOptions()
+		{
+			$allPages = Page::sortBy('baseFileName')->lists('title', 'baseFileName');
+			$pages = array('');
+
+			foreach ($allPages as $key => $value) {
+					$pages[$key] = "{$value} - (File: $key)";
+			}
+
+			return $pages;
+		}
 
     /**
      * @var array Guarded fields

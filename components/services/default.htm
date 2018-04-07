@@ -1,20 +1,19 @@
 {% set services = __SELF__.services %}
-<div class="container">
-    <div class="row">
-        <div class="service-container">
-        {% for service in services %}
-
-            <div class="col-xs-12 col-sm-4 service grow-y no-padding text-center">
-                <div class="col-xs-12 title-block">
-                    <h2 class="service-title">{{ service.title }}</h2>
-                </div>
-                <hr/>
-                <div class="col-xs-12">
-                    <p class="service-text">{{ service.text }}</p>
-                    <a href="{{ service.link }}" class="btn btn-default slider-button black hvr-fade">Lees meer</a>
-                </div>
-            </div>
-        {% endfor %}
-        </div>
-    </div>
+<div class="clearfix">
+	<div class="col-lg-1"></div>
+	<div class="services__container col-sm-12 col-lg-10">
+		{% for service in services %}
+		<div class="col-sm-12 col-md-4 grow-y text-center">
+			<div class="services__item clearfix">
+				<div class="col-sm-12 title-block nopad">
+					<h3 class="services__title">{{ service.title }}</h3>
+				</div>
+				<div class="col-sm-12 nopad">
+					<p class="services__text">{{ service.text }}</p>
+					<a href="{{ service.link }}" class="btn btn-default slider-button black hvr-fade">Read more</a>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
 </div>

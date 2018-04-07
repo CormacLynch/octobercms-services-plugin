@@ -7,16 +7,15 @@ fields:
         label: ID
         disabled: true
     title:
-        label: Title
+        label: getright.services::lang.modeldataform.title
         type: text
         required: true
     text:
-        label: Text
+        label: getright.services::lang.modeldataform.description
         type: textarea
         required: true
     link:
-        label: Read more link
-        type: text
-        required: true
-
-
+        label: getright.services::lang.modeldataform.internalurl
+        type: dropdown
+        placeholder: getright.services::lang.modeldataform.internalurlplaceholder
+        options: getUrlOptions
